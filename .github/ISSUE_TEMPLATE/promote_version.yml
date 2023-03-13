@@ -1,0 +1,15 @@
+name: Promote Version
+description: Request promote version
+title: "[Release]: "
+labels: []
+assignees:
+  - matrixji
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Devlake New Version
+      description: The new version want to promote
+      placeholder: 0.10.0-aplha1
+    validations:
+      required: true

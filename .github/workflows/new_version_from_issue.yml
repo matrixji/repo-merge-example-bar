@@ -4,9 +4,9 @@ on:
     types: ["opened"]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - run: |
-        env
+          env

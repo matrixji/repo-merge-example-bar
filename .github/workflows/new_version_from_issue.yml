@@ -1,7 +1,7 @@
 name: New Version From Issue
 on:
   issues:
-    types: ["opened"]
+    types: ["opened", "reopen"]
 
 jobs:
   test:

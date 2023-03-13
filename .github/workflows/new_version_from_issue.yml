@@ -18,3 +18,10 @@ jobs:
         with:
           script: |
             console.log(context)
+            let body = context.payload.issue.body
+            if (body.satrtsWith('### Devlake New Version')) {
+              let lines = body.split()
+              let versionText = lines[lines.length-1]
+              console.log(lines)
+              console.log(versionText)
+            }

@@ -12,8 +12,9 @@ jobs:
           env
           version=$(cat ${GITHUB_EVENT_PATH} | jq -r '.issue.body' | tail -n 1)
           echo "NEW_VERSION=${version}" >> $GITHUB_ENV
+      - run: |
+          echo ${NEW_VERSION}
       - uses: actions/github-script@v6
         with:
           script: |
-            const { NEW_VERSION } = process.env
-            console.log(NEW_VERSION)
+            console.log(context)

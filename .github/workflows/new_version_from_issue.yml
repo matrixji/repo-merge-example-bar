@@ -24,6 +24,7 @@ jobs:
           git config user.email github-actions@github.com
           git add -u
           git commit -m "ci: promote version ${version}"
+          git push origin auto-promote-version-${version} --force
           gh pr create \
             --base main \
             --body "Fixes: #${issue_number}" \

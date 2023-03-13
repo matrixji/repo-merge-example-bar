@@ -14,13 +14,13 @@ jobs:
           echo "NEW_VERSION=${version}" >> $GITHUB_ENV
       - uses: actions/github-script@v6
         with:
-        script: |
-          const { NEW_VERSION } = process.env
-          console.log(NEW_VERSION)
-          console.log(context)
-          const branch = await github.rest.branches.get({
-            branch: "auto-update-version-" + NEW_VERSION
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-          })
-          console.log(branch)
+          script: |
+            const { NEW_VERSION } = process.env
+            console.log(NEW_VERSION)
+            console.log(context)
+            const branch = await github.rest.branches.get({
+              branch: "auto-update-version-" + NEW_VERSION
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+            })
+            console.log(branch)

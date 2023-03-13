@@ -19,8 +19,7 @@ jobs:
           script: |
             console.log(context)
             let body = context.payload.issue.body
-            console.log(body)
-            if (body.satrtsWith('### Devlake New Version')) {
+            if (body.startsWith('### Devlake New Version')) {
               let lines = body.split()
               let versionText = lines[lines.length-1]
               console.log(lines)

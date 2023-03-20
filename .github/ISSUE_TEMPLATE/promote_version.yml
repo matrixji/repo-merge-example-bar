@@ -13,3 +13,4 @@ body:
       placeholder: 0.10.0-aplha1
     validations:
       required: true
+      validationRule: /^\d+\.\d+\.\d+\(-(alpha|beta|rc)(\d+)?)?/
